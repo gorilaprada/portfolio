@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Sekuya&display=swap');
+
+:root {
+  --text-color: #ffffff;
+  --color-cyan: #2FF3E0;
+  --color-gold: #F8D210;
+  --color-gold-opaque: #F8D21060;
+  --color-pink: #FA26A0;
+  --color-chili: #F51720;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Geom, Tahoma;
+  color: var(--text-color);
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--color-gold) 0%,
+    var(--color-chili) 100%
+  );
+}
+
+h1, h2 {
+  font-family: Sekuya, Geom, Tahoma;
+}
+
+h3 {
+  font-family: Geom, Tahoma;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2, h3 {
+  font-size: 2rem;
+}
+
+section {
+  padding: 3em min(2em, 15%);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+.text-container {
+  flex: 0 1 34em;
+}
+
+.text-container p {
+  justify-content: center;
+  align-items: center;
+  margin: .75em 0 1em 0;
+  font-size: 1.25rem;
+}

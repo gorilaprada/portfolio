@@ -1,0 +1,9 @@
+@media(max-width: 1103px) {
+  header {
+    text-align: center;
+  }
+
+  header .text-container {
+    padding-top: 0;
+  }
+}

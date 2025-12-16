@@ -1,0 +1,44 @@
+nav {
+  margin: 1em auto 3em auto;
+  width: min(1000px, 100%);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 2em;
+}
+
+ul {
+  z-index: 10;
+  height: 80px;
+  width: min(500px, 90%);
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  top: 20px;
+  background-color: var(--color-gold-opaque);
+  border-radius: 500px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid white;
+
+  a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 1em 2em;
+    letter-spacing: 3px;
+    border-radius: 500px;
+    transition: 150ms ease;
+  }
+
+  a:hover {
+    background-color: var(--color-gold);
+    color: var(--color-chili);
+    scale: 1.1;
+  }
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 201,
+    "title": "Dual-Fin Budgeting Web App",
+    "description": "A collaborative web application designed specifically for couples to track shared and individual expenses. Features real-time synchronization, automated transaction categorization, and visual debt payoff planning.",
+    "type": "Full-Stack Web App",
+    "status": "In Development",
+    "technologies": [
+      "React",
+      "Firebase (Auth & Firestore)",
+      "Node.js",
+      "Chai/Mocha (Testing)"
+    ],
+    "link": "https://github.com/myuser/dual-fin-budget",
+    "liveDemo": null,
+    "isFeatured": true
+  },
+  {
+    "id": 202,
+    "title": "ZenLift Workout Tracker (Mobile)",
+    "description": "A minimalist mobile app for logging weightlifting and cardio sessions. Key features include a customizable exercise library, progress visualization (1RM calculation), and a rest timer with haptic feedback.",
+    "type": "Mobile Application",
+    "status": "Completed",
+    "technologies": [
+      "Swift",
+      "Core Data",
+      "SwiftUI",
+      "HealthKit Integration"
+    ],
+    "link": "https://github.com/myuser/zenlift-ios",
+    "liveDemo": "https://apps.apple.com/us/app/zenlift-app/id123456789"
+  },
+  {
+    "id": 203,
+    "title": "Mercury: macOS Animation Manager",
+    "description": "A small macOS utility built to enhance user experience by **removing those annoying macOS timely animations** (e.g., resizing windows, launching apps), resulting in instant, snappier window management and system responsiveness.",
+    "type": "macOS Utility",
+    "status": "Deployed",
+    "technologies": [
+      "Swift",
+      "AppKit",
+      "Shell Scripting"
+    ],
+    "link": "https://github.com/myuser/mercury-macOS-tweaker",
+    "liveDemo": null,
+    "isFeatured": true
+  },
+  {
+    "id": 204,
+    "title": "Retinafy: HIDPI Resolution Tool",
+    "description": "A system tool designed to enable **Retina display-like resolution on standard resolution screens** (like FHD, QHD, or 4K monitors) by forcing macOS into a HiDPI mode, significantly increasing display sharpness and pixel density.",
+    "type": "macOS Utility",
+    "status": "Maintenance",
+    "technologies": [
+      "C++",
+      "Objective-C",
+      "IOKit (for display manipulation)"
+    ],
+    "link": "https://github.com/myuser/retinafy-hidpi",
+    "liveDemo": null
+  },
+  {
+    "id": 205,
+    "title": "Lumina Code Snippet Manager",
+    "description": "A lightweight, local-first web application for storing, tagging, and quickly searching coding snippets. Includes syntax highlighting, markdown support, and seamless import/export functionality.",
+    "type": "Full-Stack Web App",
+    "status": "Beta Testing",
+    "technologies": [
+      "SvelteKit",
+      "Tailwind CSS",
+      "IndexedDB",
+      "Prism.js"
+    ],
+    "link": "https://github.com/myuser/lumina-snippets",
+    "liveDemo": "https://lumina.mysnippets.com"
+  }
+]
