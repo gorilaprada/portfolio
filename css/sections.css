@@ -12,14 +12,22 @@
   right: 55%;
   background-color: var(--color-chili);
   box-shadow: 0px 0px 10px 10px var(--color-chili);
-  animation: ballBounce 10s 2s linear infinite alternate;
+  animation: ballBounce 10s 1.5s linear infinite alternate;
 }
 
 .b-2 {
   right: 25%;
   background-color: var(--color-cyan);
-  box-shadow: 0px 0px 10px 10px var(---color-cyan);
+  box-shadow: 0px 0px 10px 10px var(--color-cyan);
   animation: ballBounce 10s linear infinite alternate;
+}
+
+.b-3 {
+  bottom: -13rem;
+  right: 75%;
+  background-color: var(--color-pink);
+  box-shadow: 0px 0px 10px 10px var(--color-pink);
+  animation: ballBounce 10s 2s linear infinite alternate-reverse;
 }
 
 @keyframes ballBounce{
@@ -61,7 +69,7 @@ header img {
 /* Portfolio */
 section p {
   margin-top: 1em;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,6 +83,15 @@ section p {
   margin: auto;
 }
 
-.border-container {
+.container-border {
   border: 1px solid var(--color-gold);
+  border-radius: 20px;
+  padding: 1em;
+  transition: 150ms;
+}
+
+.container-border:hover {
+  /* background-color: rgba(169, 169, 169, 0.2); */
+  backdrop-filter: blur(25px);
+  scale: 1.01;
 }

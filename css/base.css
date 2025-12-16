@@ -59,6 +59,7 @@ section {
 
 .text-container {
   flex: 0 1 34em;
+  text-align: center;
 }
 
 .text-container p {
