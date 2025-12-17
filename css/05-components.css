@@ -1,0 +1,36 @@
+.circle {
+  position: absolute;
+  z-index: -1;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+}
+
+@keyframes ballBounce{
+  0% 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25vh);
+  }
+}
+
+.cta-button {
+  color: var(--text-color);
+  border: 1px solid var(--color-gold);
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 1em 1.5em;
+  border-radius: 500px;
+  transition: 150ms ease;
+}
+
+.cta-button:hover {
+  background-color: var(--color-gold);
+  color: var(--color-chili);
+  scale: 1.1;
+}
+
+

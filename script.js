@@ -1,3 +1,27 @@
+// Copy text function
+const buttons = document.querySelectorAll(".copy-button");
+
+buttons.forEach(button => {
+  button.addEventListener('click', function (e) {
+    // Prevent default 
+    e.preventDefault();
+
+    // Find the <p> inside the clicked element
+    const text = this.querySelector('p').innerText;
+
+    // Copy text to clipboard
+    navigator.clipboard.writeText(text).then(() => {
+      console.log(`Text copied ${text}`);
+      // Change the copy icon to check icon
+    }).catch(err => {
+      console.log(`Text not copied. ${err}`);
+    })
+  })
+}
+);
+
+
+
 // Function to fetch the JSON data and display the projects
 async function fetchAndDisplayProjects() {
   const container = document.getElementById('projects-container');

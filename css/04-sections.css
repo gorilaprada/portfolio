@@ -1,12 +1,4 @@
 /* Background animations */
-.circle {
-  position: absolute;
-  z-index: -1;
-  width: 20rem;
-  height: 20rem;
-  border-radius: 50%;
-}
-
 .b-1 {
   top: -13rem;
   right: 55%;
@@ -30,40 +22,12 @@
   animation: ballBounce 10s 2s linear infinite alternate-reverse;
 }
 
-@keyframes ballBounce{
-  0% 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(25vh);
-  }
-}
-
 /* Header */
 header img {
   z-index: 9;
   max-width: 100%;
   border-radius: 1em;
   object-fit: cover;
-}
-
-.cta-button {
-  color: var(--text-color);
-  border: 1px solid var(--color-gold);
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  font-size: 1.25rem;
-  padding: 1em 2em;
-  letter-spacing: 3px;
-  border-radius: 500px;
-  transition: 150ms ease;
-}
-
-.cta-button:hover {
-  background-color: var(--color-gold);
-  color: var(--color-chili);
-  scale: 1.1;
 }
 
 /* Portfolio */
@@ -91,7 +55,25 @@ section p {
 }
 
 .container-border:hover {
-  /* background-color: rgba(169, 169, 169, 0.2); */
   backdrop-filter: blur(25px);
   scale: 1.01;
+}
+
+/* Footer */
+footer div {
+  padding: 2em;
+  margin: 2em;
+}
+
+#text-to-copy {
+  font-size: 2rem;
+}
+
+#footer-button {
+  display: flex;
+  gap: 0.5em;
+}
+
+.icon {
+  fill: var(--text-color);
 }
