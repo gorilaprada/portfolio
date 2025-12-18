@@ -77,3 +77,10 @@ footer div {
 .icon {
   fill: var(--text-color);
 }
+
+.svg-container {
+  width: 1em;
+  height: 1em;
+  align-items: center;
+  justify-self: center;
+}
