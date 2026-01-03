@@ -23,7 +23,7 @@ h2, h3 {
 }
 
 section {
-  padding: 3em min(2em, 15%);
+  padding: 2em min(2em, 15%);
 }
 
 .flex-container {
@@ -34,16 +34,17 @@ section {
 }
 
 .gap-large {
-    gap: 2em;
+    gap: 3em;
+    /* padding-top: 2em; */
 }
 
 .text-container {
-  flex: 0 1 34em;
+  flex-basis: 35vw;
   text-align: center;
 }
 
 .text-container p {
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin: .75em 0 2em 0;
   font-size: 1.25rem;

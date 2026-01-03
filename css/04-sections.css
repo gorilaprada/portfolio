@@ -23,11 +23,28 @@
 }
 
 /* Header */
+header {
+  height: calc(100vh - 90px);
+  /* New code  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 header img {
   z-index: 9;
   max-width: 100%;
   border-radius: 1em;
   object-fit: cover;
+}
+
+#hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Portfolio */

@@ -1,6 +1,9 @@
 nav {
-  margin: 1em auto 3em auto;
+  margin: auto;
+  /* margin: 2em auto 2em auto; */
   width: min(1000px, 100%);
+  position: sticky;
+  top: 10px;
 }
 
 nav ul {
@@ -19,7 +22,6 @@ ul {
   left: 0;
   right: 0;
   margin: auto auto;
-  top: 20px;
   background-color: var(--color-gold-opaque);
   border-radius: 500px;
   -webkit-backdrop-filter: blur(5px);
