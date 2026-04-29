@@ -26,6 +26,15 @@ section {
   padding: 2em min(2em, 15%);
 }
 
+.scanline {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  background-size: 100% 4px, 3px 100%;
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
