@@ -8,10 +8,8 @@
   white-space: pre;
   font-size: 8px;
   line-height: 1.1;
-  color: #ff00ff;
-
-  text-shadow: 0 0 8px #ff00ff, 0 0 20px #7000ff;
-
+  color: var(--orange);
+  text-shadow: 0 0 8px var(--orange), 0 0 10px #ffffff;
   display: inline-block;
   transform-style: preserve-3d;
 }
