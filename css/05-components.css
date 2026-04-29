@@ -16,23 +16,10 @@
   transform-style: preserve-3d;
 }
 
-.floppy-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: monospace;
-  white-space: pre;
-  font-size: 8px;
-  line-height: 1.1;
-  color: #ff00ff;
-  text-shadow: 0 0 8px #ff00ff;
-  margin: 0;
-  pointer-events: none;
-}
-
 .cta-button {
-  color: var(--text-color);
-  border: 1px solid var(--color-gold);
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--orange) 30%, var(--red) 60%, var(--purple) 80%, var(--dark-purple) 100%);
+  color: var(--primary)
+  /* border: 1px solid var(--text-color); */
   display: block;
   text-decoration: none;
   text-align: center;
@@ -43,8 +30,8 @@
 }
 
 .cta-button:hover {
-  background-color: var(--color-gold);
-  color: var(--color-chili);
+  background-color: var(--yellow);
+  color: var(--text-color);
   scale: 1.1;
 }
 

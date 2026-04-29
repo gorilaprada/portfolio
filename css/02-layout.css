@@ -1,9 +1,5 @@
 body {
-  background: linear-gradient(
-    to bottom,
-    var(--color-gold) 0%,
-    var(--color-chili) 100%
-  );
+  background-color: --primary;
 }
 
 h1, h2 {

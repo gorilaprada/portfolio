@@ -22,14 +22,14 @@ ul {
   left: 0;
   right: 0;
   margin: auto auto;
-  background-color: var(--color-gold-opaque);
+  background: linear-gradient(90deg, var(--yellow) 0%, var(--orange) 30%, var(--red) 60%, var(--purple) 80%, var(--dark-purple) 100%);
   border-radius: 500px;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border: 1px solid white;
 
   a {
-    color: var(--text-color);
+    color: var(--primary);
     text-decoration: none;
     display: block;
     padding: 1em 2em;
@@ -39,8 +39,8 @@ ul {
   }
 
   a:hover {
-    background-color: var(--color-gold);
-    color: var(--color-chili);
+    background-color: var(--yellow);
+    color: var(--text-color);
     scale: 1.1;
   }
 }
