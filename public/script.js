@@ -107,13 +107,26 @@ buttons.forEach(button => {
 
 
 // Function to fetch the JSON data and display the projects
+async function fetchAndRenderRepos() {
+  try {
+    const res = await fetch("/api/repos");
+    const reposFromKv = await res.json();
+
+    await renderRepos(reposFromKv);
+
+  } catch (error) {
+    console.error("Could not render repos:", error);
+  }
+}
+
+
 async function renderRepos(listOfRepos) {
   const container = document.getElementById('repos-container');
   container.innerHTML = "";
 
   try {
     listOfRepos.forEach(repo => {
-      markup = `
+      const markup = `
         <div class="repo-card">
           <div class="flex-container text-container container-border">
             <h3 class="project-title">${repo.name}</h3>
@@ -131,3 +144,4 @@ async function renderRepos(listOfRepos) {
   }
 }
 
+fetchAndRenderRepos();
