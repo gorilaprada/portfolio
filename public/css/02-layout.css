@@ -37,7 +37,7 @@ section {
   background-color: var(--primary);
 
   background-image: linear-gradient(
-    135deg,
+    145deg,
     transparent 30%,
     var(--yellow) 30%, var(--yellow) 35%,
     var(--orange) 35%, var(--orange) 40%,

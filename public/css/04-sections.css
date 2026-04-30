@@ -25,7 +25,7 @@ section p {
   justify-content: center;
 }
 
-#projects-container {
+#repos-container {
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 3em;
