@@ -1,22 +1,23 @@
-#floppy-container {
-  perspective: 1000px;
-  transform-style: preserve-3d;
+.container {
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#rotating-floppy {
-  font-family: monospace;
-  white-space: pre;
-  font-size: 8px;
-  line-height: 1.1;
-  color: var(--orange);
-  text-shadow: 0 0 8px var(--orange), 0 0 10px #ffffff;
-  display: inline-block;
-  transform-style: preserve-3d;
+#ascii {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 0.6;   
+  letter-spacing: 0; 
+  white-space: pre;   
+  text-align: center; 
 }
+
 
 .cta-button {
   background: linear-gradient(90deg, var(--yellow) 0%, var(--orange) 30%, var(--red) 60%, var(--purple) 80%, var(--dark-purple) 100%);
-  color: var(--primary)
+  color: var(--primary);
   /* border: 1px solid var(--text-color); */
   display: block;
   text-decoration: none;

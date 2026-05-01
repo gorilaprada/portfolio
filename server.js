@@ -1,5 +1,11 @@
 import { serveDir } from "jsr:@std/http/file-server";
 import { Octokit, App } from "https://esm.sh/octokit?dts";
+import { fromFileUrl, join, dirname } from "jsr:@std/path";
+
+const __dirname = dirname(fromFileUrl(import.meta.url));
+const PUBLIC_ROOT = join(__dirname, "public");
+const kv = await Deno.openKv();
+const GH_TOKEN = Deno.env.get("GH_TOKEN");
 
 Deno.serve((req) => {
   const pathname = new URL(req.url).pathname;
@@ -9,28 +15,38 @@ Deno.serve((req) => {
   }
 
   return serveDir(req, {
-    fsRoot: "public",
+    fsRoot: PUBLIC_ROOT,
     showDirListing: true,
     enableCors: true,
+    headers: [
+      "Cache-Control: no-cache, no-store, must-revalidate",
+      "Pragma: no-cache",
+      "Expires: 0",
+    ],
   });
 });
 
 async function handleRepoRequest() {
-  const kv = await Deno.openKv();
   const entry = await kv.get(["repos"]);
 
   return new Response(JSON.stringify(entry.value || []), {
-    headers: { "Content-Type": "application/json"}
+    headers: {
+      "Content-Type": "application/json",
+      "Cache-Control": "no-cache",
+    }
   });
 }
 
-const GH_TOKEN = Deno.env.get("GH_TOKEN");
 
 async function getReposAndWriteToKv() {
-  const octokit = new Octokit({
-    auth: GH_TOKEN,
-  });
+  if (!GH_TOKEN) {
+    console.error("GH_TOKEN not found");
+    return;
+  }
 
+  const octokit = new Octokit({ auth: GH_TOKEN });
+
+  try{
   const { data } = await octokit.request('GET /users/{username}/repos', {
     username: 'gorilaprada',
     headers: {
@@ -45,9 +61,11 @@ async function getReposAndWriteToKv() {
     html_url: repo.html_url,
   }));
 
-  const kv = await Deno.openKv();
   await kv.set(["repos"], cleanedData);
   console.log("Data synced to KV")
+  } catch (err) {
+    console.error("Failed to fetch GH repos:", error);
+  }
 };
 
 
