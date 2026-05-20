@@ -21,6 +21,7 @@ h2, h3 {
 section {
   padding: 2em min(2em, 15%);
 }
+
 /* Background */
 .scanline {
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
@@ -67,7 +68,7 @@ section {
 }
 
 .text-container {
-  flex-basis: 35vw;
+  flex-basis: 50ch;
   text-align: center;
 }
 

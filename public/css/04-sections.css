@@ -17,17 +17,12 @@ header {
 }
 
 /* Portfolio */
-section p {
-  margin-top: 1em;
-  font-size: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #repos-container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: 40ch;
+  overflow-x: scroll;
   gap: 3em;
   width: 75%;
   margin: auto;

@@ -64,7 +64,7 @@ async function getReposAndWriteToKv() {
   await kv.set(["repos"], cleanedData);
   console.log("Data synced to KV")
   } catch (err) {
-    console.error("Failed to fetch GH repos:", error);
+    console.error("Failed to fetch GH repos:", err);
   }
 };
 
