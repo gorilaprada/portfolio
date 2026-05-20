@@ -90,9 +90,8 @@ const ctx = document.createElement("canvas").getContext("2d", { willReadFrequent
 video.play();
 
 function render() {
-  const { width, height } = pre.getBoundingClientRect();
   const cols = 100;
-  const rows = 100;
+  const rows = 100 / 2;
   ctx.canvas.width = cols;
   ctx.canvas.height = rows;
   
