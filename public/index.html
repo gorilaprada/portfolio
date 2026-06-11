@@ -4,13 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorilaprada | Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <div class="terminal-container">
     <pre id="ascii"></pre>
+    <div class="titlebar">
+      <span class="dot dot-close"></span>
+      <span class="dot dot-min"></span>
+      <span class="dot dot-max"></span>
+      <span class="titlebar-label">gorilaprada — portfolio</span>
+    </div>
+
+    <div class="terminal-body">
+      <p class="terminal-prompt">select an option:</p>
+      <div class="menu">
+        <button class="menu-btn" data-option="1"><span class="bracket">[1]</span> projects</button>
+        <button class="menu-btn" data-option="2"><span class="bracket">[2]</span> streak</button>
+        <button class="menu-btn" data-option="3"><span class="bracket">[3]</span> contact</button>
+      </div>
+      <p class="terminal-output" id="output"></p>
+    </div>
   </div>
+
 
   <video id="videoSource" loop muted playsinline hidden>
     <source src="./img/dodo.mp4" type="video/mp4">

@@ -2,7 +2,8 @@
   "name": "portfolio",
   "version": "0.2.0",
   "scripts": {
-    "test": "node --env-file=.env ./scripts/sync-github.js"
+    "test": "node --env-file=.env ./scripts/sync-github.js",
+    "server": "pnpm dlx live-server public/"
   },
   "devEngines": {
     "packageManager": {
