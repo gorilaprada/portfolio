@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "0.2.0",
+  "scripts": {
+    "test": "node --env-file=.env ./scripts/sync-github.js"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.2.2",
+      "onFail": "download"
+    }
+  },
+  "type": "module"
+}
