@@ -23,8 +23,8 @@ menuBtn.forEach(btn => {
         renderProjects();
         break;
       case "2":
-        showView(contentView);
         await typeWriterEffect(text_2, "output");
+        showView(contentView);
         renderStreak();
         break;
       case "3":
