@@ -1,87 +1,187 @@
-// Declaring variables
-const buttons = document.querySelectorAll(".copy-button");
-const svg = document.querySelector(".svg-container");
-const floppy = document.getElementById("rotating-floppy");
-const checkmarkSVG = `
-  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-    <path d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
-  </svg>
-`
-const copySVG = `
-  <svg  width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M7.5 3H14.6C16.8402 3 17.9603 3 18.816 3.43597C19.5686 3.81947 20.1805 4.43139 20.564 5.18404C21 6.03969 21 7.15979 21 9.4V16.5M6.2 21H14.3C15.4201 21 15.9802 21 16.408 20.782C16.7843 20.5903 17.0903 20.2843 17.282 19.908C17.5 19.4802 17.5 18.9201 17.5 17.8V9.7C17.5 8.57989 17.5 8.01984 17.282 7.59202C17.0903 7.21569 16.7843 6.90973 16.408 6.71799C15.9802 6.5 15.4201 6.5 14.3 6.5H6.2C5.0799 6.5 4.51984 6.5 4.09202 6.71799C3.71569 6.90973 3.40973 7.21569 3.21799 7.59202C3 8.01984 3 8.57989 3 9.7V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.0799 21 6.2 21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-`
-// Copy text function
-buttons.forEach(button => {
-  button.addEventListener('click', function (e) {
-    // Prevent default
-    e.preventDefault();
+//=====================
+// Menu logic
+//=====================
+const menuView = document.getElementById("menu-view");
+const contentView = document.getElementById("content-view");
+const contentOutput = document.getElementById("content-output");
+const backBtn = document.getElementById("back-btn");
+const menuBtn = document.querySelectorAll(".menu-btn");
 
-    // Find the <p> inside the clicked element
-    const text = this.querySelector('p').innerText;
+function showView(view) {
+  menuView.style.display = "none";
+  contentView.style.display = "none";
+  view.style.display = "flex";
+}
 
-    // Copy text to clipboard
-    navigator.clipboard.writeText(text).then(() => {
-      console.log(`Text copied ${text}`);
-
-      // Change the copy icon to check icon
-      svg.innerHTML = checkmarkSVG;
-
-      setTimeout(() => {
-        svg.innerHTML = copySVG;
-      }, 2000)
-    }).catch(err => {
-      console.log(`Text not copied. ${err}`);
-    })
+menuBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const option = btn.dataset.option;
+    switch (option) {
+      case "1":
+        showView(contentView);
+        renderProjects();
+        break;
+      case "2":
+        showView(contentView);
+        renderStreak();
+        break;
+      case "3":
+        showView(contentView);
+        renderCard();
+        break;
+      default:
+        return;
+    }
   })
-}
-);
+})
 
+backBtn.addEventListener("click", () => {
+  showView(menuView);
+  contentOutput.innerHTML = "";
+});
 
+//=====================
+// Type Writer Effect
+const prefix = "guest@gorila: ~ $"
+const text = "// welcome to the gorila terminal please choose an option"
+const speed = 50;
+let i = 0;
+let innerTyping = "";
 
-// Function to fetch the JSON data and display the projects
-async function fetchAndRenderRepos() {
-  try {
-    const res = await fetch("/api/repos");
-    const reposFromKv = await res.json();
-
-    await renderRepos(reposFromKv);
-
-  } catch (error) {
-    console.error("Could not render repos:", error);
+function typeWriterEffect() {
+  if ( i < text.length) {
+    innerTyping += text[i];
+    document.getElementById("output").innerHTML = prefix + innerTyping + `<span class="cursor"></span>`;
+    i++;
+    setTimeout(typeWriterEffect, speed);
   }
+};
+
+typeWriterEffect();
+
+
+//=====================
+// Fetch the JSON data and display the projects
+//=====================
+
+async function renderProjects() {
+
+  const res = await fetch("data.json");
+  const { repos } = await res.json();
+
+  const divider = "-".repeat(48);
+  
+  const markup = repos.map(repo => `
+<span class="proj-divider">${divider}</span>
+<span class="proj-name"><strong>${repo.name}</strong></span>
+<span class="proj-desc">${repo.description}</span>
+<span class="proj-lang">lang  → ${repo.language}</span>
+<span class="proj-url"><a href="${repo.url}" target="_blank">Link to repo</a></span>
+`).join("\n");
+
+  contentOutput.innerHTML = "";
+  contentOutput.insertAdjacentHTML("beforeend", `<pre class="proj-output">${markup}</pre>`);
 }
 
+//=====================
+// Fetch the JSON data and display coding streak
+//=====================
 
-async function renderRepos(listOfRepos) {
-  const container = document.getElementById('repos-container');
-  container.innerHTML = "";
+async function renderStreak() {
+  const res = await fetch("./data.json");
+  const { codingStreak, events } = await res.json();
 
-  try {
-    listOfRepos.forEach(repo => {
-      const markup = `
-        <div class="repo-card">
-          <div class="flex-container text-container container-border">
-            <h3 class="project-title">${repo.name}</h3>
-            <p class="project-description">${repo.description}</p>
-            <p class="project-language">${repo.language}</p>
-            <a href="${repo.html_url}" class="cta-button">View Project</a>
-          </div>
-        </div>
-      `
-      container.insertAdjacentHTML("beforeend", markup);
-    })} catch (error) {
-    // Handle any errors during fetching or processing
-    console.error('Error processing projects:', error);
-    container.innerHTML = '<p class="error">Could not load repos.</p>';
-  }
+  const { percentage } = codingStreak.threeMonthTracking;
+  const barLength = 40;
+  const filled = Math.round((percentage / 100) * barLength);
+  const empty = barLength - filled;
+
+  const progressBar = `[${"█".repeat(filled)}${"░".repeat(empty)}] ${percentage}%`;
+
+  const eventLog = events
+    .map(event => `${event.date} → ${event.repo}`)
+    .join("\n");
+
+  const divider = "-".repeat(48);
+
+  const markup = `
+<div class="streak-container">
+  <div class="streak-progress">
+    <span class="streak-label"><strong>last 3-months commit %</strong></span>
+    <span class="streak-bar">${progressBar}</span>
+  </div>
+  
+  <div class="streak-divider">${divider}</div>
+
+  <div class="streak-log">
+    <span class="streak-log-label"><strong>recent commits</strong></span>
+    <pre class="streak-events">${eventLog}</pre>
+  </div>
+
+  <div class="streak-divider">${divider}</div>
+
+  <div class="streak-note">
+    <p><strong>If I did not commit one day it is probably because I was on <a href="https://www.boot.dev/u/gorilaprada" target="_blank">boot.dev</a>. Check it out!</strong></p>
+    <img src="https://api.boot.dev/v1/users/public/f30f42d3-9bc3-4a58-89d7-e4eea1cd6103/thumbnail" alt="boot.dev profile">
+  </div>
+</div>
+`;
+
+  contentOutput.innerHTML = "";
+  contentOutput.insertAdjacentHTML("beforeend", markup);
 }
 
-fetchAndRenderRepos();
+//=====================
+// Render Contact Card
+//=====================
 
-// Whole ASCII ART code
+
+async function renderCard() {
+  const markup = `
+<div class="contact-card">
+  <div class="contact-avatar">
+    <img src="https://github.com/gorilaprada.png" alt="gorilaprada">
+  </div>
+  
+  <h2 class="contact-name">Carlos Prada</h2>
+  <p class="contact-title">Just a Dev</p>
+  
+  <div class="contact-divider">─────────────────────────────────</div>
+  
+  <div class="contact-links">
+    <a href="https://github.com/gorilaprada" target="_blank" class="contact-link">
+      <span class="contact-icon">→</span> GitHub
+    </a>
+    <a href="https://linkedin.com/in/gorilaprada" target="_blank" class="contact-link">
+      <span class="contact-icon">→</span> LinkedIn
+    </a>
+    <a href="https://x.com/gorilaprada" target="_blank" class="contact-link">
+      <span class="contact-icon">→</span> X (Twitter)
+    </a>
+    <a href="https://dev.to/gorilaprada" target="_blank" class="contact-link">
+      <span class="contact-icon">→</span> Dev.to
+    </a>
+    <a href="https://discord.com/users/gorilaprada" target="_blank" class="contact-link">
+      <span class="contact-icon">→</span> Discord
+    </a>
+  </div>
+  
+  <div class="contact-divider">─────────────────────────────────</div>
+  
+  <div class="contact-email">
+    <p class="contact-email-label">fastest way to contact me</p>
+    <a href="mailto:gorilaprada@gmail.com" class="contact-email-link">gorilaprada@gmail.com</a>
+  </div>
+</div>
+`;
+  
+  contentOutput.innerHTML = "";
+  contentOutput.insertAdjacentHTML("beforeend", markup);
+}
+
+//=====================
+// ASCII ART
+//=====================
 const density = " .:-=+*#%@"; // Brightness map (left = dark, right = light)
 const pre = document.getElementById("ascii");
 const video = document.getElementById("videoSource");
@@ -110,4 +210,5 @@ function render() {
   pre.textContent = ascii;
   requestAnimationFrame(render);
 }
+
 render();
