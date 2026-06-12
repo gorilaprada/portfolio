@@ -14,18 +14,21 @@ function showView(view) {
 }
 
 menuBtn.forEach(btn => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", async () => {
     const option = btn.dataset.option;
     switch (option) {
       case "1":
+        await typeWriterEffect(text_1, "output");
         showView(contentView);
         renderProjects();
         break;
       case "2":
         showView(contentView);
+        await typeWriterEffect(text_2, "output");
         renderStreak();
         break;
       case "3":
+        await typeWriterEffect(text_3, "output");
         showView(contentView);
         renderCard();
         break;
@@ -43,21 +46,35 @@ backBtn.addEventListener("click", () => {
 //=====================
 // Type Writer Effect
 const prefix = "guest@gorila: ~ $"
-const text = "// welcome to the gorila terminal please choose an option"
+const text_0 = "// welcome to the gorila terminal please choose an option"
+const text_1 = "initializing project retrieval...";
+const text_2 = "initializing coding streak retrieval..."
+const text_3 = "initializing contact information retrieval..."
 const speed = 50;
-let i = 0;
-let innerTyping = "";
 
-function typeWriterEffect() {
-  if ( i < text.length) {
-    innerTyping += text[i];
-    document.getElementById("output").innerHTML = prefix + innerTyping + `<span class="cursor"></span>`;
-    i++;
-    setTimeout(typeWriterEffect, speed);
-  }
+
+function typeWriterEffect(text, elementId, customPrefix = prefix) {
+  return new Promise((resolve) => {
+    let i = 0;
+    let innerTyping = "";
+    const element = document.getElementById(elementId);
+
+    function type() {
+      if ( i < text.length) {
+        innerTyping += text[i];
+        element.innerHTML = customPrefix + innerTyping + `<span class="cursor"></span>`;
+        i++;
+        setTimeout(type, speed);
+      } else {
+        resolve();
+      }
+    }
+
+    type();
+  });
 };
 
-typeWriterEffect();
+typeWriterEffect(text_0, "output");
 
 
 //=====================

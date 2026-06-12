@@ -132,7 +132,7 @@ body {
 }
 
 .terminal-output {
-  color: var(--highlight);
+  color: var(--text-color);
   font-size: 14px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -147,16 +147,14 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 6px;
-  opacity: 0.4;          /* dim it so it reads as background */
-  z-index: 0;            /* behind everything */
-  pointer-events: none;  /* clicks pass through to buttons */
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
   overflow: hidden;
 }
 /* ====================================== */
 /*  Projects view */
 /* ====================================== */
-
-
 #content-view {
   display: flex;
   flex-direction: column;
@@ -191,7 +189,6 @@ body {
 /* ====================================== */
 /* Streak view */
 /* ====================================== */
-
 .streak-container {
   display: flex;
   flex-direction: column;
@@ -276,11 +273,9 @@ body {
   border: 1px solid var(--highlight);
   border-radius: 4px;
 }
-
 /* ====================================== */
 /* Contact Card */
 /* ====================================== */
-
 .contact-card {
   display: flex;
   flex-direction: column;
@@ -400,7 +395,6 @@ body {
 /* ====================================== */
 /* Cursor */
 /* ====================================== */
-
 .cursor {
   display: inline-block;
   width: 0.5rem;
