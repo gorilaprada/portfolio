@@ -11,6 +11,13 @@ function showView(view) {
   menuView.style.display = "none";
   contentView.style.display = "none";
   view.style.display = "flex";
+
+  if (view === contentView) {
+    backBtn.classList.add("active");
+  } else {
+    backBtn.classList.remove("active");
+    selectButton(0);
+  }
 }
 
 menuBtn.forEach(btn => {
@@ -39,13 +46,14 @@ menuBtn.forEach(btn => {
 })
 
 backBtn.addEventListener("click", () => {
+  typeWriterEffect(text_0, "output");
   showView(menuView);
   contentOutput.innerHTML = "";
 });
 
-//=====================
 // Type Writer Effect
-const prefix = "guest@gorila: ~ $"
+//=====================
+const prefix = "guest@gorila:~$ "
 const text_0 = "// welcome to the gorila terminal please choose an option"
 const text_1 = "initializing project retrieval...";
 const text_2 = "initializing coding streak retrieval..."
@@ -76,7 +84,89 @@ function typeWriterEffect(text, elementId, customPrefix = prefix) {
 
 typeWriterEffect(text_0, "output");
 
+// Keyboard Navigation
+//=====================
+let selectedIndex = 0;
 
+function selectButton(index) {
+  menuBtn.forEach((btn, i) => {
+    if (i === index) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+  selectedIndex = index;
+}
+
+function activateSelectedButton() {
+  const buttons = document.querySelectorAll(".menu-btn:not(#back-btn)");
+  if (selectedIndex < buttons.length) {
+    buttons[selectedIndex].click();
+  }
+}
+
+document.addEventListener("keydown", (e) => {
+  const buttons = document.querySelectorAll(".menu-btn:not(#back-btn)");
+
+  if (menuView.style.display !== "none") {
+    switch (e.key) {
+      case "1":
+        e.preventDefault();
+        buttons[0].click();
+        break;
+      case "2":
+        e.preventDefault();
+        buttons[1].click();
+        break;
+      case "3":
+        e.preventDefault();
+        buttons[2].click();
+        break;
+      case "ArrowDown":
+      case "j":
+        e.preventDefault();
+        selectedIndex = (selectedIndex + 1) % buttons.length;
+        selectButton(selectedIndex);
+        break;
+      case "ArrowUp":
+      case "k":
+        e.preventDefault();
+        selectedIndex = (selectedIndex - 1 + buttons.length) % buttons.length;
+        selectButton(selectedIndex);
+        break;
+      case "Enter":
+        e.preventDefault();
+        activateSelectedButton();
+        break;
+      default:
+        break;
+    }
+  } else if (contentView.style.display !== "none") {
+    switch (e.key) {
+      case "ArrowDown":
+      case "j":
+        e.preventDefault();
+        contentOutput.scrollTop += 20;
+        break;
+      case "ArrowUp":
+      case "k":
+        e.preventDefault();
+        contentOutput.scrollTop -= 20;
+        break;
+      case "0":
+      case "Enter":
+      case "Escape":
+        e.preventDefault();
+        backBtn.click();
+        break;
+      default:
+        break;
+    }
+  }
+});
+
+selectButton(0);
 //=====================
 // Fetch the JSON data and display the projects
 //=====================

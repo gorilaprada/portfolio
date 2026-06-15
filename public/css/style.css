@@ -120,6 +120,7 @@ body {
 .menu-btn.active {
   background: #1a2e25;
   color: var(--highlight-2);
+  border-color: var(--highlight-2);
 }
 
 #back-btn {
@@ -187,7 +188,7 @@ body {
 .proj-url a   { color: var(--highlight); text-decoration: none; }
 .proj-url a:hover { text-decoration: underline; }
 /* ====================================== */
-/* Streak view */
+/* Coding Streak view */
 /* ====================================== */
 .streak-container {
   display: flex;
