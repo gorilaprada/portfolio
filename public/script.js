@@ -53,8 +53,9 @@ backBtn.addEventListener("click", () => {
 
 // Type Writer Effect
 //=====================
+
 const prefix = "guest@gorila:~$ "
-const text_0 = "// welcome to the gorila terminal please choose an option"
+const text_0 = "// welcome to the gorila terminal; select sequence to initialize"
 const text_1 = "initializing project retrieval...";
 const text_2 = "initializing coding streak retrieval..."
 const text_3 = "initializing contact information retrieval..."
@@ -86,6 +87,7 @@ typeWriterEffect(text_0, "output");
 
 // Keyboard Navigation
 //=====================
+
 let selectedIndex = 0;
 
 function selectButton(index) {
@@ -167,6 +169,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 selectButton(0);
+
 //=====================
 // Fetch the JSON data and display the projects
 //=====================

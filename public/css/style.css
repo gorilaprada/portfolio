@@ -79,6 +79,12 @@ body {
   letter-spacing: 0.05em;
 }
 
+.titlebar-info {
+  font-size: 12px;
+  color: var(--highlight);
+  letter-spacing: 0.05em;
+}
+
 .terminal-body {
   position: relative;
   z-index: 1;
@@ -215,6 +221,9 @@ body {
   font-size: 13px;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.02em;
+  display: block;        /* add */
+  width: 100%;           /* add */
+  word-break: break-all; /* add */
 }
 
 .streak-divider {
