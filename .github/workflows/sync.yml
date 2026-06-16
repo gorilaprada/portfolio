@@ -5,6 +5,9 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -28,5 +31,9 @@ jobs:
           git config user.email "bot@portfolio.com"
           git config user.name "sync-bot"
           git add data.json
-          git diff --staged --quiet || git commit -m "sync"
-          git push
+          if git diff --staged --quiet; then
+            echo "No changes detected in data.json. Skipping push."
+          else
+            git commit -m "chore: automated data sync"
+            git push origin HEAD:data
+          fi
