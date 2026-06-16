@@ -1,11 +1,13 @@
-//=====================
+//====================
 // Menu logic
 //=====================
+
 const menuView = document.getElementById("menu-view");
 const contentView = document.getElementById("content-view");
 const contentOutput = document.getElementById("content-output");
 const backBtn = document.getElementById("back-btn");
 const menuBtn = document.querySelectorAll(".menu-btn");
+
 
 function showView(view) {
   menuView.style.display = "none";
@@ -16,14 +18,18 @@ function showView(view) {
     backBtn.classList.add("active");
   } else {
     backBtn.classList.remove("active");
-    if (!window.matchMedia("(pointer: coarse)").matches) {
+    if (window.innerWidth > 715) {
       selectButton(0);
     }
   }
 }
 
+
 menuBtn.forEach(btn => {
   btn.addEventListener("click", async () => {
+    if (wait) return;
+    wait = true;
+
     const option = btn.dataset.option;
     switch (option) {
       case "1":
@@ -44,13 +50,23 @@ menuBtn.forEach(btn => {
       default:
         break;
     }
+
+    wait = false;
   })
 })
 
-backBtn.addEventListener("click", () => {
-  typeWriterEffect(text_0, "output");
+backBtn.addEventListener("click", async () => {
+  if (window.innerWidth > 715) {
+    selectButton(0);
+  }
+
+  wait = true;
+
   showView(menuView);
   contentOutput.innerHTML = "";
+  await typeWriterEffect(text_0, "output");
+
+  wait = false;
 });
 
 // Type Writer Effect
@@ -85,12 +101,9 @@ function typeWriterEffect(text, elementId, customPrefix = prefix) {
   });
 };
 
-typeWriterEffect(text_0, "output");
 
 // Keyboard Navigation
 //=====================
-
-let selectedIndex = 0;
 
 function selectButton(index) {
   menuBtn.forEach((btn, i) => {
@@ -169,11 +182,6 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
-
-
-if (!window.matchMedia("(pointer: coarse)").matches) {
-  selectButton(0);
-}
 
 //=====================
 // Fetch the JSON data and display the projects
@@ -297,7 +305,7 @@ async function renderCard() {
 //=====================
 // ASCII ART
 //=====================
-const density = " .:-=+*#%@"; // Brightness map (left = dark, right = light)
+const density = " .:-=+*#%@";
 const pre = document.getElementById("ascii");
 const video = document.getElementById("videoSource");
 const ctx = document.createElement("canvas").getContext("2d", { willReadFrequently: true });
@@ -309,11 +317,9 @@ function render() {
   const rows = 100 / 2;
   ctx.canvas.width = cols;
   ctx.canvas.height = rows;
-  
-  // 1. Draw your content (video, image, or shapes) to the hidden canvas
+
   ctx.drawImage(video, 0, 0, cols, rows);
 
-  // 2. Sample pixels and map to ASCII
   const pixels = ctx.getImageData(0, 0, cols, rows).data;
   let ascii = "";
   for (let i = 0; i < pixels.length; i += 4) {
@@ -321,9 +327,27 @@ function render() {
     ascii += density[Math.floor((brightness / 255) * (density.length - 1))];
     if ((i / 4 + 1) % cols === 0) ascii += "\n";
   }
-  
+
   pre.textContent = ascii;
   requestAnimationFrame(render);
 }
 
 render();
+
+//=====================
+// Page Init
+//=====================
+async function initializeWebPage() {
+  globalThis.wait = false;
+  globalThis.selectedIndex = 0;
+
+  if (window.innerWidth > 715) {
+    selectButton(0);
+  }
+
+  wait = true;
+  await typeWriterEffect(text_0, "output");
+  wait = false;
+}
+
+initializeWebPage();
