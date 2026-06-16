@@ -16,7 +16,9 @@ function showView(view) {
     backBtn.classList.add("active");
   } else {
     backBtn.classList.remove("active");
-    selectButton(0);
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+      selectButton(0);
+    }
   }
 }
 
@@ -40,7 +42,7 @@ menuBtn.forEach(btn => {
         renderCard();
         break;
       default:
-        return;
+        break;
     }
   })
 })
@@ -168,7 +170,10 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-selectButton(0);
+
+if (!window.matchMedia("(pointer: coarse)").matches) {
+  selectButton(0);
+}
 
 //=====================
 // Fetch the JSON data and display the projects

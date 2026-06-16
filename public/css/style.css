@@ -54,7 +54,7 @@ body {
 .titlebar {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 1rem;
   padding: 1rem;
   background: #0d1712;
   border-bottom: 1px solid #1e2e27;
@@ -62,8 +62,8 @@ body {
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -74,13 +74,13 @@ body {
 .titlebar-label {
   flex: 1;
   text-align: center;
-  font-size: 12px;
+  font-size: 1rem;
   color: var(--highlight);
   letter-spacing: 0.05em;
 }
 
 .titlebar-info {
-  font-size: 12px;
+  font-size: 1rem;
   color: var(--highlight);
   letter-spacing: 0.05em;
 }
@@ -97,7 +97,7 @@ body {
 
 .terminal-prompt {
   color: var(--highlight-2);
-  font-size: 14px;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
   letter-spacing: 0.05em;
 }
@@ -105,7 +105,7 @@ body {
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .menu-btn {
@@ -113,7 +113,7 @@ body {
   border: 1px solid var(--highlight);
   color: var(--text-color);
   font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-size: 1rem;
   padding: 10px 16px;
   text-align: left;
   border-radius: 4px;
@@ -135,12 +135,12 @@ body {
 
 .bracket {
   color: var(--highlight);
-  margin-right: 12px;
+  margin-right: 1rem;
 }
 
 .terminal-output {
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 1.2rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   min-height: 20px;
@@ -174,21 +174,20 @@ body {
   display: center;
   margin-top: 1rem;
   min-height: 0;
-  /* addons */
   flex-direction: column;
   align-items: center;
 }
 
 .proj-output {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 1.8;
   display: flex;
   flex-direction: column;
 }
 
 .proj-divider { color: var(--highlight);  }
-.proj-name    { color: var(--highlight-2); font-size: 13px; }
+.proj-name    { color: var(--highlight-2); font-size: 1.2rem; }
 .proj-desc    { color: var(--text-color); }
 .proj-lang    { color: var(--highlight); }
 .proj-url a   { color: var(--highlight); text-decoration: none; }
@@ -211,24 +210,21 @@ body {
 
 .streak-label {
   color: var(--highlight-2);
-  font-size: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .streak-bar {
   color: var(--highlight);
-  font-size: 13px;
+  font-size: 1.2rem;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.02em;
-  display: block;        /* add */
-  width: 100%;           /* add */
-  word-break: break-all; /* add */
 }
 
 .streak-divider {
   color: var(--highlight);
-  font-size: 12px;
+  font-size: 1rem;
   letter-spacing: -0.05em;
 }
 
@@ -240,14 +236,14 @@ body {
 
 .streak-log-label {
   color: var(--highlight-2);
-  font-size: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
 .streak-events {
   color: var(--text-color);
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
   white-space: pre-wrap;
@@ -263,7 +259,7 @@ body {
 
 .streak-note p {
   color: var(--text-color);
-  font-size: 12px;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
 }
@@ -299,8 +295,8 @@ body {
 }
 
 .contact-avatar {
-  width: 100px;
-  height: 100px;
+  width: 15rem;
+  height: auto;
   border-radius: 8px;
   border: 2px solid var(--highlight);
   overflow: hidden;
@@ -317,7 +313,7 @@ body {
 }
 
 .contact-name {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: var(--highlight-2);
   margin: 0;
@@ -325,7 +321,7 @@ body {
 }
 
 .contact-title {
-  font-size: 12px;
+  font-size: 1rem;
   color: var(--highlight);
   margin: 0;
   text-transform: uppercase;
@@ -334,7 +330,7 @@ body {
 
 .contact-divider {
   color: var(--highlight);
-  font-size: 11px;
+  font-size: 1.2rem;
   letter-spacing: -0.05em;
   width: 100%;
   text-align: center;
@@ -343,7 +339,7 @@ body {
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   width: 100%;
   max-width: 300px;
 }
@@ -351,13 +347,13 @@ body {
 .contact-link {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
   border: 1px solid var(--highlight);
   border-radius: 4px;
   color: var(--text-color);
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.7rem;
   transition: background 0.15s, color 0.15s;
   cursor: pointer;
 }
@@ -377,11 +373,11 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .contact-email-label {
-  font-size: 11px;
+  font-size: 1rem;
   color: var(--highlight);
   margin: 0;
   text-transform: uppercase;
@@ -389,11 +385,11 @@ body {
 }
 
 .contact-email-link {
-  font-size: 13px;
+  font-size: 1.2rem;
   color: var(--highlight-2);
   text-decoration: none;
   border: 1px solid var(--highlight-2);
-  padding: 8px 16px;
+  padding: 0.5rem 0.7rem;
   border-radius: 4px;
   transition: background 0.15s;
 }
@@ -420,5 +416,44 @@ body {
   }
   50%, 100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+    align-items: flex-start;      /* pin to top on mobile */
+    min-height: 100dvh;           /* dynamic viewport height for mobile browsers */
+  }
+
+  .terminal-container {
+    width: 100%;                  /* full width on mobile */
+    aspect-ratio: unset;          /* remove fixed ratio */
+    height: calc(100dvh - 2rem); /* fill the screen minus padding */
+  }
+
+  .terminal-body {
+    padding: 1rem;                /* tighter padding on small screens */
+  }
+
+  .menu-btn {
+    font-size: 1.5rem;              /* slightly smaller text on mobile */
+    padding: 0.5rem 1rem;
+  }
+
+  .titlebar-info {
+    display: none;                /* hide keyboard hints on mobile since no keyboard */
+  }
+
+  .streak-bar {
+    font-size: 0.9rem;
+  }
+
+  .streak-note img {
+    width: 100%;                  /* prevent image overflow on mobile */
+  }
+
+  .contact-link {
+    font-size: 1rem;
   }
 }
