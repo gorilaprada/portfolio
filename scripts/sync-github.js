@@ -100,4 +100,4 @@ const payload = {
   codingStreak: streakInfo,
 };
 
-writeFile("./public/data.json", JSON.stringify(payload, null, 2));
+writeFile("data.json", JSON.stringify(payload, null, 2));
