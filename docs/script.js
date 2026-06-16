@@ -8,6 +8,7 @@ const contentOutput = document.getElementById("content-output");
 const backBtn = document.getElementById("back-btn");
 const menuBtn = document.querySelectorAll(".menu-btn");
 
+const DATA_URL = "https://raw.githubusercontent.com/gorilaprada/portfolio/refs/heads/data/data.json";
 
 function showView(view) {
   menuView.style.display = "none";
@@ -189,7 +190,7 @@ document.addEventListener("keydown", (e) => {
 
 async function renderProjects() {
 
-  const res = await fetch("data.json");
+  const res = await fetch(DATA_URL);
   const { repos } = await res.json();
 
   const divider = "-".repeat(48);
@@ -211,7 +212,7 @@ async function renderProjects() {
 //=====================
 
 async function renderStreak() {
-  const res = await fetch("./data.json");
+  const res = await fetch(DATA_URL);
   const { codingStreak, events } = await res.json();
 
   const { percentage } = codingStreak.threeMonthTracking;
