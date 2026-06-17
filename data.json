@@ -74,6 +74,21 @@
     {
       "is_public": "public",
       "repo": "gorilaprada/portfolio",
+      "date": "2026-06-16"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/portfolio",
+      "date": "2026-06-16"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/portfolio",
+      "date": "2026-06-16"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/portfolio",
       "date": "2026-06-15"
     },
     {
@@ -135,21 +150,6 @@
       "is_public": "public",
       "repo": "gorilaprada/boot_dev",
       "date": "2026-06-02"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/100-days-of-solana",
-      "date": "2026-06-02"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/100-days-of-solana",
-      "date": "2026-06-02"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/100-days-of-solana",
-      "date": "2026-05-30"
     }
   ],
   "codingStreak": {
