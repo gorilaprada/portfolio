@@ -28,6 +28,21 @@
   "events": [
     {
       "is_public": "public",
+      "repo": "gorilaprada/dutch",
+      "date": "2026-06-30"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/dutch",
+      "date": "2026-06-30"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/boot_dev",
+      "date": "2026-06-29"
+    },
+    {
+      "is_public": "public",
       "repo": "gorilaprada/portfolio",
       "date": "2026-06-16"
     },
@@ -135,21 +150,6 @@
       "is_public": "public",
       "repo": "gorilaprada/100-days-of-solana",
       "date": "2026-06-04"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/100-days-of-solana",
-      "date": "2026-06-03"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/boot_dev",
-      "date": "2026-06-02"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/boot_dev",
-      "date": "2026-06-02"
     }
   ],
   "codingStreak": {
@@ -203,12 +203,14 @@
       "2026-06-11",
       "2026-06-12",
       "2026-06-15",
-      "2026-06-16"
+      "2026-06-16",
+      "2026-06-29",
+      "2026-06-30"
     ],
     "threeMonthTracking": {
-      "active": 50,
+      "active": 52,
       "total": 90,
-      "percentage": 56
+      "percentage": 58
     }
   }
 }
