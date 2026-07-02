@@ -1,7 +1,3 @@
--- How to run the website --
+# My First Personal Project!
 
-1. git clone https://github.com/gorilaprada/portfolio.git inside a directory
-
-2. cd into directory
-
-3. run : npx live-server
+A wesite to get to know my better. [Click Here!](https://gorilaprada.com)
