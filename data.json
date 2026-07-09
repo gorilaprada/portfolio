@@ -13,6 +13,12 @@
       "language": "CSS"
     },
     {
+      "name": "pokedex",
+      "url": "https://github.com/gorilaprada/pokedex",
+      "description": "Boot.dev - Pokedex project",
+      "language": "TypeScript"
+    },
+    {
       "name": "portfolio",
       "url": "https://github.com/gorilaprada/portfolio",
       "description": "Where you can see all my projects.",
@@ -145,11 +151,6 @@
       "is_public": "public",
       "repo": "gorilaprada/100-days-of-solana",
       "date": "2026-06-09"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/dutch",
-      "date": "2026-06-08"
     }
   ],
   "codingStreak": {
@@ -205,12 +206,15 @@
       "2026-06-30",
       "2026-07-01",
       "2026-07-02",
-      "2026-07-03"
+      "2026-07-03",
+      "2026-07-06",
+      "2026-07-07",
+      "2026-07-08"
     ],
     "threeMonthTracking": {
-      "active": 52,
+      "active": 55,
       "total": 90,
-      "percentage": 58
+      "percentage": 61
     }
   }
 }
