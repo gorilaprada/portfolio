@@ -131,16 +131,10 @@
       "is_public": "public",
       "repo": "gorilaprada/portfolio",
       "date": "2026-06-16"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/portfolio",
-      "date": "2026-06-15"
     }
   ],
   "codingStreak": {
     "days": [
-      "2026-04-15",
       "2026-04-21",
       "2026-04-27",
       "2026-04-28",
@@ -193,9 +187,9 @@
       "2026-07-08"
     ],
     "threeMonthTracking": {
-      "active": 51,
+      "active": 50,
       "total": 90,
-      "percentage": 57
+      "percentage": 56
     }
   }
 }
