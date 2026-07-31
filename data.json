@@ -1,6 +1,12 @@
 {
   "repos": [
     {
+      "name": "blog_aggregator",
+      "url": "https://github.com/gorilaprada/blog_aggregator",
+      "description": "Boot.dev - Blog Aggregator project",
+      "language": "TypeScript"
+    },
+    {
       "name": "boot_dev",
       "url": "https://github.com/gorilaprada/boot_dev",
       "description": "Boot Dev Back end Developer Path Progress!",
@@ -34,6 +40,16 @@
   "events": [
     {
       "is_public": "public",
+      "repo": "gorilaprada/boot_dev",
+      "date": "2026-07-30"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/blog_aggregator",
+      "date": "2026-07-30"
+    },
+    {
+      "is_public": "public",
       "repo": "gorilaprada/dutch",
       "date": "2026-07-03"
     },
@@ -56,21 +72,10 @@
       "is_public": "public",
       "repo": "gorilaprada/dutch",
       "date": "2026-07-01"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/dutch",
-      "date": "2026-06-30"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/dutch",
-      "date": "2026-06-30"
     }
   ],
   "codingStreak": {
     "days": [
-      "2026-04-30",
       "2026-05-01",
       "2026-05-02",
       "2026-05-04",
@@ -115,12 +120,19 @@
       "2026-07-03",
       "2026-07-06",
       "2026-07-07",
-      "2026-07-08"
+      "2026-07-08",
+      "2026-07-16",
+      "2026-07-17",
+      "2026-07-20",
+      "2026-07-21",
+      "2026-07-22",
+      "2026-07-27",
+      "2026-07-30"
     ],
     "threeMonthTracking": {
-      "active": 46,
+      "active": 52,
       "total": 90,
-      "percentage": 51
+      "percentage": 58
     }
   }
 }
