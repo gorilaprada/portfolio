@@ -47,21 +47,10 @@
       "is_public": "public",
       "repo": "gorilaprada/blog_aggregator",
       "date": "2026-07-30"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/dutch",
-      "date": "2026-07-03"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/dutch",
-      "date": "2026-07-02"
     }
   ],
   "codingStreak": {
     "days": [
-      "2026-05-02",
       "2026-05-04",
       "2026-05-05",
       "2026-05-06",
@@ -114,9 +103,9 @@
       "2026-07-30"
     ],
     "threeMonthTracking": {
-      "active": 51,
+      "active": 50,
       "total": 90,
-      "percentage": 57
+      "percentage": 56
     }
   }
 }
