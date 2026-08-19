@@ -1,6 +1,12 @@
 {
   "repos": [
     {
+      "name": "20_file_server_and_cdn",
+      "url": "https://github.com/gorilaprada/20_file_server_and_cdn",
+      "description": "Boot.dev - Learn File Servers and CDNs ",
+      "language": null
+    },
+    {
       "name": "blog_aggregator",
       "url": "https://github.com/gorilaprada/blog_aggregator",
       "description": "Boot.dev - Blog Aggregator project",
@@ -62,7 +68,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-05-18",
       "2026-05-19",
       "2026-05-20",
       "2026-05-21",
@@ -111,9 +116,9 @@
       "2026-08-17"
     ],
     "threeMonthTracking": {
-      "active": 47,
+      "active": 46,
       "total": 90,
-      "percentage": 52
+      "percentage": 51
     }
   }
 }
