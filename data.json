@@ -4,7 +4,7 @@
       "name": "20_file_server_and_cdn",
       "url": "https://github.com/gorilaprada/20_file_server_and_cdn",
       "description": "Boot.dev - Learn File Servers and CDNs ",
-      "language": null
+      "language": "TypeScript"
     },
     {
       "name": "blog_aggregator",
@@ -52,6 +52,11 @@
   "events": [
     {
       "is_public": "public",
+      "repo": "gorilaprada/20_file_server_and_cdn",
+      "date": "2026-08-19"
+    },
+    {
+      "is_public": "public",
       "repo": "gorilaprada/chirpy",
       "date": "2026-08-17"
     },
@@ -68,7 +73,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-05-19",
       "2026-05-20",
       "2026-05-21",
       "2026-05-23",
@@ -113,7 +117,8 @@
       "2026-08-07",
       "2026-08-11",
       "2026-08-13",
-      "2026-08-17"
+      "2026-08-17",
+      "2026-08-19"
     ],
     "threeMonthTracking": {
       "active": 46,
