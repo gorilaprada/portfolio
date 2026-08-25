@@ -53,6 +53,16 @@
     {
       "is_public": "public",
       "repo": "gorilaprada/20_file_server_and_cdn",
+      "date": "2026-08-24"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/20_file_server_and_cdn",
+      "date": "2026-08-24"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/20_file_server_and_cdn",
       "date": "2026-08-19"
     },
     {
@@ -114,12 +124,15 @@
       "2026-08-11",
       "2026-08-13",
       "2026-08-17",
-      "2026-08-19"
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24"
     ],
     "threeMonthTracking": {
-      "active": 42,
+      "active": 45,
       "total": 90,
-      "percentage": 47
+      "percentage": 50
     }
   }
 }
