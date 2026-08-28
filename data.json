@@ -7,6 +7,12 @@
       "language": "TypeScript"
     },
     {
+      "name": "22_learn-pub-sub-typescript",
+      "url": "https://github.com/gorilaprada/22_learn-pub-sub-typescript",
+      "description": "Boot.dev - Learn Pub/Sub ",
+      "language": null
+    },
+    {
       "name": "blog_aggregator",
       "url": "https://github.com/gorilaprada/blog_aggregator",
       "description": "Boot.dev - Blog Aggregator project",
@@ -31,6 +37,12 @@
       "language": "CSS"
     },
     {
+      "name": "goserver",
+      "url": "https://github.com/gorilaprada/goserver",
+      "description": "Boot.dev - Learn Docker Go Server",
+      "language": null
+    },
+    {
       "name": "pokedex",
       "url": "https://github.com/gorilaprada/pokedex",
       "description": "Boot.dev - Pokedex project",
@@ -50,6 +62,11 @@
     }
   ],
   "events": [
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/20_file_server_and_cdn",
+      "date": "2026-08-26"
+    },
     {
       "is_public": "public",
       "repo": "gorilaprada/20_file_server_and_cdn",
@@ -88,7 +105,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-05-27",
       "2026-05-28",
       "2026-05-29",
       "2026-05-30",
@@ -133,7 +149,8 @@
       "2026-08-21",
       "2026-08-24",
       "2026-08-25",
-      "2026-08-26"
+      "2026-08-26",
+      "2026-08-27"
     ],
     "threeMonthTracking": {
       "active": 46,
