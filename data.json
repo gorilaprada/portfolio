@@ -64,6 +64,16 @@
   "events": [
     {
       "is_public": "public",
+      "repo": "gorilaprada/boot_dev",
+      "date": "2026-08-27"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/boot_dev",
+      "date": "2026-08-27"
+    },
+    {
+      "is_public": "public",
       "repo": "gorilaprada/20_file_server_and_cdn",
       "date": "2026-08-26"
     },
@@ -105,7 +115,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-05-28",
       "2026-05-29",
       "2026-05-30",
       "2026-06-01",
@@ -153,9 +162,9 @@
       "2026-08-27"
     ],
     "threeMonthTracking": {
-      "active": 46,
+      "active": 45,
       "total": 90,
-      "percentage": 51
+      "percentage": 50
     }
   }
 }
