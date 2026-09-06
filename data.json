@@ -64,6 +64,11 @@
   "events": [
     {
       "is_public": "public",
+      "repo": "gorilaprada/23_learn-pub-sub-typescript",
+      "date": "2026-09-04"
+    },
+    {
+      "is_public": "public",
       "repo": "gorilaprada/boot_dev",
       "date": "2026-08-27"
     },
@@ -105,7 +110,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-06-05",
       "2026-06-06",
       "2026-06-08",
       "2026-06-09",
@@ -147,9 +151,9 @@
       "2026-09-04"
     ],
     "threeMonthTracking": {
-      "active": 40,
+      "active": 39,
       "total": 90,
-      "percentage": 44
+      "percentage": 43
     }
   }
 }
