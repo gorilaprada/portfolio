@@ -71,6 +71,11 @@
     {
       "is_public": "public",
       "repo": "gorilaprada/22_learn-web-security-typescript",
+      "date": "2026-09-16"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/22_learn-web-security-typescript",
       "date": "2026-09-14"
     },
     {
@@ -132,16 +137,10 @@
       "is_public": "public",
       "repo": "gorilaprada/20_file_server_and_cdn",
       "date": "2026-08-19"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/chirpy",
-      "date": "2026-08-17"
     }
   ],
   "codingStreak": {
     "days": [
-      "2026-06-16",
       "2026-06-29",
       "2026-06-30",
       "2026-07-01",
@@ -177,7 +176,8 @@
       "2026-09-10",
       "2026-09-11",
       "2026-09-14",
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-16"
     ],
     "threeMonthTracking": {
       "active": 37,
