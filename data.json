@@ -71,6 +71,16 @@
     {
       "is_public": "public",
       "repo": "gorilaprada/22_learn-web-security-typescript",
+      "date": "2026-09-28"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/22_learn-web-security-typescript",
+      "date": "2026-09-28"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/22_learn-web-security-typescript",
       "date": "2026-09-25"
     },
     {
@@ -147,16 +157,6 @@
       "is_public": "public",
       "repo": "gorilaprada/23_learn-pub-sub-typescript",
       "date": "2026-09-04"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/boot_dev",
-      "date": "2026-08-27"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/boot_dev",
-      "date": "2026-08-27"
     }
   ],
   "codingStreak": {
@@ -203,12 +203,13 @@
       "2026-09-21",
       "2026-09-22",
       "2026-09-23",
-      "2026-09-25"
+      "2026-09-25",
+      "2026-09-28"
     ],
     "threeMonthTracking": {
-      "active": 43,
+      "active": 44,
       "total": 90,
-      "percentage": 48
+      "percentage": 49
     }
   }
 }
