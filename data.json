@@ -37,10 +37,10 @@
       "language": "TypeScript"
     },
     {
-      "name": "dutch",
-      "url": "https://github.com/gorilaprada/dutch",
+      "name": "dutchlib",
+      "url": "https://github.com/gorilaprada/dutchlib",
       "description": "Card game I am making to play with my friends.",
-      "language": "CSS"
+      "language": "TypeScript"
     },
     {
       "name": "goserver",
@@ -171,7 +171,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-07-02",
       "2026-07-03",
       "2026-07-06",
       "2026-07-07",
@@ -213,7 +212,8 @@
       "2026-09-25",
       "2026-09-28",
       "2026-09-30",
-      "2026-10-01"
+      "2026-10-01",
+      "2026-10-02"
     ],
     "threeMonthTracking": {
       "active": 43,
