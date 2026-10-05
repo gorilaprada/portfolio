@@ -70,6 +70,11 @@
   "events": [
     {
       "is_public": "public",
+      "repo": "gorilaprada/dutchlib",
+      "date": "2026-10-02"
+    },
+    {
+      "is_public": "public",
       "repo": "gorilaprada/22_learn-web-security-typescript",
       "date": "2026-10-01"
     },
