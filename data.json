@@ -71,6 +71,11 @@
     {
       "is_public": "public",
       "repo": "gorilaprada/dutchlib",
+      "date": "2026-10-26"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/dutchlib",
       "date": "2026-10-20"
     },
     {
@@ -148,12 +153,14 @@
       "2026-10-08",
       "2026-10-20",
       "2026-10-21",
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-23",
+      "2026-10-26"
     ],
     "threeMonthTracking": {
-      "active": 38,
+      "active": 40,
       "total": 90,
-      "percentage": 42
+      "percentage": 44
     }
   }
 }
