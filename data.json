@@ -102,16 +102,6 @@
       "is_public": "public",
       "repo": "gorilaprada/22_learn-web-security-typescript",
       "date": "2026-09-30"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/22_learn-web-security-typescript",
-      "date": "2026-09-28"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/22_learn-web-security-typescript",
-      "date": "2026-09-28"
     }
   ],
   "codingStreak": {
@@ -154,12 +144,13 @@
       "2026-10-21",
       "2026-10-22",
       "2026-10-23",
-      "2026-10-26"
+      "2026-10-26",
+      "2026-10-28"
     ],
     "threeMonthTracking": {
-      "active": 39,
+      "active": 40,
       "total": 90,
-      "percentage": 43
+      "percentage": 44
     }
   }
 }
