@@ -97,21 +97,10 @@
       "is_public": "public",
       "repo": "gorilaprada/dutchlib",
       "date": "2026-10-02"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/22_learn-web-security-typescript",
-      "date": "2026-10-01"
-    },
-    {
-      "is_public": "public",
-      "repo": "gorilaprada/22_learn-web-security-typescript",
-      "date": "2026-09-30"
     }
   ],
   "codingStreak": {
     "days": [
-      "2026-07-31",
       "2026-08-03",
       "2026-08-04",
       "2026-08-05",
@@ -152,9 +141,9 @@
       "2026-10-28"
     ],
     "threeMonthTracking": {
-      "active": 39,
+      "active": 38,
       "total": 90,
-      "percentage": 43
+      "percentage": 42
     }
   }
 }
