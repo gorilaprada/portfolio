@@ -43,6 +43,12 @@
       "language": "TypeScript"
     },
     {
+      "name": "gorilaprada",
+      "url": "https://github.com/gorilaprada/gorilaprada",
+      "description": null,
+      "language": null
+    },
+    {
       "name": "goserver",
       "url": "https://github.com/gorilaprada/goserver",
       "description": "Boot.dev - Learn Docker Go Server",
@@ -68,6 +74,21 @@
     }
   ],
   "events": [
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/gorilaprada",
+      "date": "2026-11-12"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/dutch",
+      "date": "2026-11-10"
+    },
+    {
+      "is_public": "public",
+      "repo": "gorilaprada/dutch",
+      "date": "2026-11-10"
+    },
     {
       "is_public": "public",
       "repo": "gorilaprada/dutch",
@@ -139,12 +160,13 @@
       "2026-11-05",
       "2026-11-06",
       "2026-11-09",
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-12"
     ],
     "threeMonthTracking": {
-      "active": 39,
+      "active": 40,
       "total": 90,
-      "percentage": 43
+      "percentage": 44
     }
   }
 }
