@@ -122,7 +122,6 @@
   ],
   "codingStreak": {
     "days": [
-      "2026-08-17",
       "2026-08-19",
       "2026-08-20",
       "2026-08-21",
@@ -163,9 +162,9 @@
       "2026-11-12"
     ],
     "threeMonthTracking": {
-      "active": 39,
+      "active": 38,
       "total": 90,
-      "percentage": 43
+      "percentage": 42
     }
   }
 }
